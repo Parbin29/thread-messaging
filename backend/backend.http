@@ -1,6 +1,16 @@
-@backend_HostAddress = http://localhost:5067
+@MessageThreadAPI_HostAddress = http://localhost:5067
 
-GET {{backend_HostAddress}}/weatherforecast/
-Accept: application/json
+### Get messages
+GET {{MessageThreadAPI_HostAddress}}/api/messages
+Content-Type: application/json
 
-###
+### Create messages
+POST {{MessageThreadAPI_HostAddress}}/api/messages
+Content-Type: application/json
+
+{
+    "text": "Hi, to the world!"
+}
+
+# ###
+# GET {{MessageThreadAPI_HostAddress}}/api/Messages/1
